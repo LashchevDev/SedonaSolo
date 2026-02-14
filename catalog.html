@@ -11,7 +11,7 @@
         <img class="logo" src="https://placehold.co" alt="логотип седона">
         <ul class="navigation-list">
       <li class="navigation-item">
-        <a  class="navigation-link" href="about.html">Главная</a>
+        <a  class="navigation-link" href="index.html">Главная</a>
       </li>
        <li>
         <a class="navigation-link" href="about-Sedona">О седоне</a>
@@ -35,22 +35,32 @@
 </ul>
 </nav>
     </header>
-<main>
+<main class="main-inner">
+ <!-- хлебные крошки -->
+<header class="inner-header">
+<h1 class="inner-header-title">Гостиницы Седоны</h1>
+<ul class="breadcrums">
+  <li class="breadcrums-item">
+  <a href="" class="breadcrums-link"><img src="https://placehold.co" alt="Главная страница"></a>
+  </li>
+  <li class="breadcrums-item">
+  <a class="breadcrums-link">гостиницы</a>
+  </li>
+</ul>
+</header>
   <!-- поиск гостиницы фильтры -->
 <section class="filters">
-<h1 class="find-hotel-sedona">Гостиницы Седоны</h1>
-<h2 class="visually-hidden" >фильтры</h2>
    <form action="https://echo.htmlacademy.ru" method="post">
 <fieldset class="choice">
   <!-- выбор инфоструктуры -->
 <legend>инфраструтура:</legend>
 <ul class="infra">
   <li class="pool">
-    <input type="checkbox" id="pool" name="infra" value="pool">
+    <input type="checkbox" id="pool" name="infra" value="pool" checked>
     <label for="pool">Бассейн</label>
   </li>
   <li class="parking">
-    <input type="checkbox" id="parking" name="infra" value="parking">
+    <input type="checkbox" id="parking" name="infra" value="parking" checked>
     <label for="parking">Парковка</label>
   </li>
   <li class="wi-fi">
@@ -64,7 +74,7 @@
 <legend>тип жилья:</legend>
 <ul class="typehouse">
   <li class="hotel">
-    <input type="radio" id="hotel" name="house" value="hotel">
+    <input type="radio" id="hotel" name="house" value="hotel" checked>
     <label for="hotel">Гостиница</label>
   </li>
   <li class="motel">
@@ -95,15 +105,143 @@
       </section>
         <!-- Сюда пойдут карточки отелей -->
   <section class="hotel-results">
+    <h2 class="find-hotel">Найдено гостиниц: 38</h2>
+    <select class="select-control" aria-label="сортировка"  name="sorting">
+    <option value="cheap"> сначала дешевые</option>
+    <option value="popular"> сачала популярные</option>
+    <option value="expensive"> сначала дорогие</option>
+    </select>
+    <!-- сортировка отелей по цене и переключение вида -->
+    <ul>
+      <li>
+        <a href="#" class="view-button view-button-grid view-button-current">
+          <span class="visually-hidden">показать карточки</span>
+        </a>
+        </li>
+         <li>
+        <a href="#" class="view-button view-button-slideshow">
+          <span class="visually-hidden">показать по одной</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="view-button view-button-list">
+          <span class="visually-hidden">показать список</span>
+        </a>
+        </li>
+    </ul>
+    <!-- каталог отелей -->
+      <ul class="hotel-list">
+ <!-- гостиница амара -->
+     <li>
+       <a href="hotel.html" class="hotel-title-image-link">
+         <img src="#" alt="" class="hotel-list-image">
+          <h3>Amara Resort & Spa</h3>
+    </a>
+        <span class="hotel">Гостиница</span>
+        <span class="price">От 4000 ₽</span>
+        <form action="https://echo.htmlacademy.ru">
+        <a href="hotel.html" class="button">подробнее</a>
+         <button class="buttonbest">в избранное</button>
+                  </form>
+          <div>
+            <span class="stars stars4">
+              <span class="visually-hidden">4 звезды</span>
+            </span>
+            <p>Рейтинг: 8,5</p>
+          </div>
+        </li>
+        <!-- Гостиница вилас поко  -->
+        <li>
+        <a href="hotel.html" class="hotel-title-image-link">
+          <img src="#" alt="" class="hotel-list-image">
+          <h3>Villas at Poco Diablo</h3>
+      </a>
+        <span class="hotel">Гостиница</span>
+        <span class="price">От 5000 ₽</span>
+        <form action="https://echo.htmlacademy.ru">
+        <a href="hotel.html" class="button">подробнее</a>
+         <button class="buttonchoice">в избранном</button>
+                  </form>
+          <div>
+            <span class="stars stars4">
+              <span class="visually-hidden">4 звезды</span>
+            </span>
+            <p>Рейтинг: 9,2</p>
+          </div>
+        </li>
+        <!-- Гостиница десерт -->
+        <li>
+          <a href="hotel.html" class="hotel-title-image-link">
+            <img src="#" alt="" class="hotel-list-image">
+            <h3>Desert Quail Inn</h3>
+          </a>
+        <span class="hotel">Гостиница</span>
+        <span class="price">От 2500 ₽</span>
+        <form action="https://echo.htmlacademy.ru">
+        <a href="hotel.html" class="button">подробнее</a>
+         <button class="buttonbest">в избранное</button>
+                  </form>
+          <div>
+            <span class="stars stars3">
+              <span class="visually-hidden">3 звезды</span>
+            </span>
+            <p>Рейтинг: 6,9</p>
+          </div>
+        </li>
+        <!-- гостиница гринтри -->
+        <li>
+          <a href="hotel.html" class="hotel-title-image-link">
+            <img src="#" alt="" class="hotel-list-image">
+           <h3>GreenTree Inn</h3>
+          </a>
+        <span class="hotel">Гостиница</span>
+        <span class="price">От 1500 ₽</span>
+        <form action="https://echo.htmlacademy.ru">
+        <a href="hotel.html" class="button">подробнее</a>
+         <button class="buttonbest">в избранное</button>
+                  </form>
+          <div>
+            <span class="stars stars2">
+              <span class="visually-hidden">2 звезды</span>
+            </span>
+            <p>Рейтинг: 5,0</p>
+          </div>
+        </li>
+        <!-- список страниц или пагинация -->
+      </ul>
+      <nav aria-label="пагинация">
+      <ul class="pagination">
+        <li class="pagination-current">
+          <a class="pagination-link" aria-current="page">1</a>
+        </li>
+            <li class="pagination-item">
+          <a href="#" class="pagination-link">2</a>
+        </li>
+            <li class="pagination-item">
+          <a href="#" class="pagination-link">3</a>
+        </li>
+            <li class="pagination-item">
+          <a  href="#" class="pagination-link">4</a>
+        </li>
+            <li class="pagination-item">
+          <span class="pagination-link pagination-break">...</span>
+        </li>
+            <li class="pagination-item">
+          <a href="#" class="pagination-link">10</a>
+        </li>
+      </ul>
+      </nav>
   </section>
 </main>
     <footer>
         <!-- 1. Контакты -->
-           <section class="footer-contact">
+       <section class="address">
         <h2 class="visually-hidden">Контакты</h2>
         <address>
       <a class="contact-phone"  href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </address>
+    </address>
+    </section>
+    <section class="footer-contact">
         <!-- 2. Соцсети -->
       <a class="contact-vk"  href="https://vk.com/htmlacademy">
         <img  class="contact-image-vk" src="https://placehold.co" alt="вконтакте" width="140" height="70">
@@ -111,7 +249,7 @@
       <a class="contact-telegram"  href="https://t.me/htmlacademy ">
         <img  class="contact-image-telegram-" src="https://placehold.co" alt="телеграм" width="140" height="70">
       </a>
-      <a class="contact-vk"  href="https://www.youtube.com/user/htmlacademyru">
+      <a class="contact-youtube"  href="https://www.youtube.com/user/htmlacademyru">
         <img class="contact-image-youtube" src="https://placehold.co" alt="ютуб" width="140" height="70">
       </a>
         <!-- 3. Копирайт / Ссылка на разработчика -->
